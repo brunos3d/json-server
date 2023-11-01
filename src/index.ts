@@ -15,7 +15,7 @@ app.get('*', (req, res) => {
 let count = 0;
 
 app.post('*', (req, res) => {
-  fs.writeFileSync(`data-${count++}.json`, JSON.stringify(req.body, null, 2));
+  fs.writeFileSync(`storage/data-${count++}.json`, JSON.stringify(req.body, null, 2));
 });
 
 app.listen(process.env.PORT || 5555, () => {
